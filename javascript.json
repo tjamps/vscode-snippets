@@ -1,0 +1,106 @@
+{
+/*
+	 // Place your snippets for JavaScript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+
+
+
+    "Angular module": {
+        "prefix": "anmod",
+        "description": "Create a new AngularJS module",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular.module('${moduleName}', []);",
+            "})();",
+            ""
+        ]
+    },
+    "Angular controller": {
+        "prefix": "anctrl",
+        "description": "Create a new AngularJS controller",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .controller('${controllerName}Controller', ['$scope', function ${controllerName}Controller($scope) {",
+            "      $0",
+            "    }]);",
+            "})();",
+            ""
+        ]
+    },
+    "Angular provider": {
+        "prefix": "anprov",
+        "description": "Create a new AngularJS provider",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .provider('${serviceName}', [function ${serviceName}Provider() {",
+            "",
+            "      this.$get = function ${serviceName}Factory() {",
+            "        var ${serviceName} = {};",
+            "        $0",
+            "",
+            "        return ${serviceName};",
+            "      };",
+            "    }]);",
+            "})();",
+            ""
+        ]
+    },
+    "Angular factory": {
+        "prefix": "anfact",
+        "description": "Create a new AngularJS factory",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .factory('${serviceName}', [function ${serviceName}Factory() {",
+            "      var ${serviceName} = {};",
+            "      $0",
+            "",
+            "      return ${serviceName};",
+            "    }]);",
+            "})();",
+            ""
+        ]
+    },
+    "Angular routes (ui.router)": {
+        "prefix": "anuiroute",
+        "description": "Create a new file to define new routes, via ui.router",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .config(['$stateProvider', function ${moduleName}Routes($stateProvider) {",
+            "      $stateProvider",
+            "        .state('$0', {})",
+            "      ;",
+            "    }]);",
+            "})();",
+            ""
+        ]
+    }
+}
