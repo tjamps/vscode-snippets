@@ -27,6 +27,24 @@
             ""
         ]
     },
+    "Angular controller (controller as)": {
+        "prefix": "anctrlas",
+        "description": "Create a new AngularJS controller supporting « controllerAs » syntax",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .controller('${controllerName}Controller', [function ${controllerName}Controller() {",
+            "      var vm = this;",
+            "",
+            "      $0",
+            "    }]);",
+            "})();",
+            ""
+        ]
+    },
     "Angular provider": {
         "prefix": "anprov",
         "description": "Create a new AngularJS provider",
@@ -85,5 +103,36 @@
             "})();",
             ""
         ]
+    },
+    "Angular configuration file": {
+        "prefix": "anconf",
+        "description": "Create a new configuration file (.config())",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .config([function ${moduleName}Config() {",
+            "      $0",
+            "    }]);",
+            "  })();"
+        ]
+    },
+    "Angular run file": {
+        "prefix": "anrun",
+        "description": "Create a new run file (.run())",
+        "body": [
+            "(function() {",
+            "  'use strict';",
+            "",
+            "  angular",
+            "    .module('${moduleName}')",
+            "    .run([function ${moduleName}Config() {",
+            "      $0",
+            "    }]);",
+            "  })();"
+        ]
     }
+
 }
