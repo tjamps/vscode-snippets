@@ -128,7 +128,7 @@
             "",
             "  angular",
             "    .module('${moduleName}')",
-            "    .run([function ${moduleName}Config() {",
+            "    .run([function ${moduleName}Run() {",
             "      $0",
             "    }]);",
             "  })();"
